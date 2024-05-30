@@ -24,11 +24,11 @@ def sigmoid(x):
 
 
 def f(x):
-    p = 0.4 * (np.log(x[0]) - np.log(60)) + 0.33 * (
-            np.log(x[1]) - np.log(100)) + 0.3 * (
-                np.log(x[3]) - np.log(100)) - 2.0 * (
-                np.log(x[0]) - np.log(60)) * (
-                np.log(x[3]) - np.log(100)) + 0.05 * np.random.logistic()
+    p = 0.4 * (np.log(x.iloc[0]) - np.log(60)) + 0.33 * (
+            np.log(x.iloc[1]) - np.log(100)) + 0.3 * (
+                np.log(x.iloc[3]) - np.log(100)) - 2.0 * (
+                np.log(x.iloc[0]) - np.log(60)) * (
+                np.log(x.iloc[3]) - np.log(100)) + 0.05 * np.random.logistic()
     if p > 0.0:
         return 1.0
     else:
